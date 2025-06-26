@@ -2395,7 +2395,7 @@ window.Quarto = {
 <li><p><code>numpy</code> for numerical operations.</p></li>
 <li><p><code>os</code> for interacting with the operating system and directory structures.tures.</p></li>
 </ul>
-<div id="6ad74df9" class="cell" data-execution_count="1">
+<div id="40e0ccc2" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import libraries</span></span>
@@ -2414,7 +2414,7 @@ window.Quarto = {
 <li><strong>documentation</strong></li>
 </ul>
 <p>These directories will store intermediate and final outputs for reproducibility.</p>
-<div id="fe700c10" class="cell" data-execution_count="2">
+<div id="2c753095" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get working directory </span></span>
@@ -2447,7 +2447,7 @@ window.Quarto = {
 <li>We use <code>skipinitialspace = True</code> to remove extra spaces after delimeters which is common in text-based datasets.</li>
 </ul>
 <p>After loading, we inspect the first few rows.</p>
-<div id="a0321000" class="cell" data-execution_count="3">
+<div id="357ce47e" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>adult_data_filename <span class="op">=</span> os.path.join(raw_dir,<span class="st">&#39;adult.csv&#39;</span>)</span>
@@ -2667,7 +2667,7 @@ window.Quarto = {
 </div>
 </div>
 <p>We also inspect the dataset’s shape. We see that the data has <em>32,561</em> rows and <em>15</em> columns.</p>
-<div id="6af91f23" class="cell" data-execution_count="4">
+<div id="9bbc996d" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>adult_df.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2683,7 +2683,7 @@ window.Quarto = {
 <section id="assign-proper-column-names-to-the-columns" class="level3" data-number="0.3.1">
 <h3 data-number="0.3.1" class="anchored" data-anchor-id="assign-proper-column-names-to-the-columns"><span class="header-section-number">0.3.1</span> 1. Assign proper column names to the columns</h3>
 <p>One of the most stricking things from the above inspection is that the dataset lacks explicit column headers. We manually assign descriptive meaningful column names based on the description of the <a href="https://archive.ics.uci.edu/dataset/2/adult">dataset</a>. This is critical for readability and interpretability in the subsequent steps.</p>
-<div id="c49f74c1" class="cell" data-execution_count="6">
+<div id="ece4505a" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>adult_df.columns <span class="op">=</span> [<span class="st">&quot;age&quot;</span>,<span class="st">&quot;workclass&quot;</span>,<span class="st">&quot;fnwgt&quot;</span>,<span class="st">&quot;education&quot;</span>,<span class="st">&quot;education_num&quot;</span>,<span class="st">&quot;marital_status&quot;</span>,<span class="st">&quot;occupation&quot;</span>,</span>
@@ -2691,7 +2691,7 @@ window.Quarto = {
 </details>
 </div>
 <p>We inspect again to see whether they are properly assigned.</p>
-<div id="294c6733" class="cell" data-execution_count="7">
+<div id="6f29456b" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>adult_df.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3623,7 +3623,7 @@ Table 2: Overview 2 of dataset columns, their data types, and the count of miss
 <section id="removing-duplicates" class="level3" data-number="0.3.5">
 <h3 data-number="0.3.5" class="anchored" data-anchor-id="removing-duplicates"><span class="header-section-number">0.3.5</span> 4. Removing Duplicates</h3>
 <p>Duplicates can distort statistical summaries and model performance. Using <code>.duplicated().sum()</code>, we count duplicate recordsWe then inspect the duplicated records..</p>
-<div id="3eebc514" class="cell" data-execution_count="16">
+<div id="6b8a05d7" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 
@@ -4504,13 +4504,13 @@ Table 2: Overview 2 of dataset columns, their data types, and the count of miss
 </div>
 <p>Finally, we remove them with <code>.drop_duplicates()</code>.</p>
 <p>We can confirm that we have no duplicates left in the dataset at this juncture.</p>
-<div id="bea078ae" class="cell" data-execution_count="18">
+<div id="2b5a5669" class="cell" data-execution_count="18">
 <div class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>0</code></pre>
 </div>
 </div>
 <p>We also inspect the current shape of the dataset and see that we have <em>32,537</em> rows and <em>15</em> columns.</p>
-<div id="272be6c4" class="cell" data-execution_count="19">
+<div id="19904a89" class="cell" data-execution_count="19">
 <div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>(32537, 15)</code></pre>
 </div>
@@ -4520,7 +4520,7 @@ Table 2: Overview 2 of dataset columns, their data types, and the count of miss
 <h3 data-number="0.3.6" class="anchored" data-anchor-id="standardize-categorical-variables"><span class="header-section-number">0.3.6</span> 5. Standardize Categorical Variables</h3>
 <p><strong>Remove any leading or trailing spaces and convert the strings to lowercase</strong></p>
 <p>To prepare categorical variables for consistent processing, we first of all remove extra spaces and convert them to lowercase. This step ensures categorical variables are clean and consistently organized.</p>
-<div id="6636a1f3" class="cell" data-execution_count="20">
+<div id="ff4b373a" class="cell" data-execution_count="20">
 <div class="cell-output cell-output-display" data-execution_count="20">
 <pre><code>age               False
 workclass          True
@@ -4540,7 +4540,7 @@ income             True
 dtype: bool</code></pre>
 </div>
 </div>
-<div id="6ad748af" class="cell" data-execution_count="22">
+<div id="8811af53" class="cell" data-execution_count="22">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>adult_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4818,7 +4818,7 @@ dtype: bool</code></pre>
 </tbody>
 </table>
 <p>.</p>
-<div id="6cdb72b4" class="cell" data-execution_count="23">
+<div id="f032e03f" class="cell" data-execution_count="23">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;workclass&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4829,7 +4829,7 @@ dtype: bool</code></pre>
        &#39;never-worked&#39;], dtype=object)</code></pre>
 </div>
 </div>
-<div id="41e7378f" class="cell" data-execution_count="24">
+<div id="ed473204" class="cell" data-execution_count="24">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;workclass&#39;</span>] <span class="op">=</span> adult_df[<span class="st">&#39;workclass&#39;</span>].replace({</span>
@@ -4920,7 +4920,7 @@ dtype: bool</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="aa530bd2" class="cell" data-execution_count="25">
+<div id="657cb843" class="cell" data-execution_count="25">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;education&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4931,7 +4931,7 @@ dtype: bool</code></pre>
        &#39;5th-6th&#39;, &#39;10th&#39;, &#39;1st-4th&#39;, &#39;preschool&#39;, &#39;12th&#39;], dtype=object)</code></pre>
 </div>
 </div>
-<div id="a7fd7e39" class="cell" data-execution_count="26">
+<div id="fe54b594" class="cell" data-execution_count="26">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;education_level&#39;</span>] <span class="op">=</span> adult_df[<span class="st">&#39;education&#39;</span>].replace({</span>
@@ -4953,7 +4953,7 @@ dtype: bool</code></pre>
 <span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="085ab6d9" class="cell" data-execution_count="27">
+<div id="12110f14" class="cell" data-execution_count="27">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>adult_df.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4966,7 +4966,7 @@ dtype: bool</code></pre>
       dtype=&#39;object&#39;)</code></pre>
 </div>
 </div>
-<div id="d815e9cb" class="cell" data-execution_count="28">
+<div id="12d2aa5a" class="cell" data-execution_count="28">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;education_level&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5013,7 +5013,7 @@ dtype: bool</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="ce300ddf" class="cell" data-execution_count="29">
+<div id="48d52153" class="cell" data-execution_count="29">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;marital_status&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5024,7 +5024,7 @@ dtype: bool</code></pre>
        &#39;widowed&#39;], dtype=object)</code></pre>
 </div>
 </div>
-<div id="816ff3a8" class="cell" data-execution_count="30">
+<div id="f9cbf779" class="cell" data-execution_count="30">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;marital_status&#39;</span>] <span class="op">=</span> adult_df[<span class="st">&#39;marital_status&#39;</span>].replace({</span>
@@ -5037,7 +5037,7 @@ dtype: bool</code></pre>
 <span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="c1247d24" class="cell" data-execution_count="31">
+<div id="8f4eff05" class="cell" data-execution_count="31">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;marital_status&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5123,7 +5123,7 @@ dtype: bool</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="ffd6e783" class="cell" data-execution_count="32">
+<div id="d0a081e3" class="cell" data-execution_count="32">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;occupation&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5136,7 +5136,7 @@ dtype: bool</code></pre>
        &#39;priv-house-serv&#39;], dtype=object)</code></pre>
 </div>
 </div>
-<div id="fe63d25f" class="cell" data-execution_count="33">
+<div id="c9daa3f2" class="cell" data-execution_count="33">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;occupation_grouped&#39;</span>] <span class="op">=</span> adult_df[<span class="st">&#39;occupation&#39;</span>].replace({</span>
@@ -5158,7 +5158,7 @@ dtype: bool</code></pre>
 <span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="acac8ede" class="cell" data-execution_count="34">
+<div id="f99be855" class="cell" data-execution_count="34">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;occupation_grouped&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5205,7 +5205,7 @@ dtype: bool</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="43592039" class="cell" data-execution_count="35">
+<div id="a097a74d" class="cell" data-execution_count="35">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;relationship&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5215,7 +5215,7 @@ dtype: bool</code></pre>
        &#39;other-relative&#39;], dtype=object)</code></pre>
 </div>
 </div>
-<div id="50360b0d" class="cell" data-execution_count="36">
+<div id="57b5787b" class="cell" data-execution_count="36">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;relationship&#39;</span>] <span class="op">=</span> adult_df[<span class="st">&#39;relationship&#39;</span>].replace({</span>
@@ -5228,7 +5228,7 @@ dtype: bool</code></pre>
 <span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="29c75e99" class="cell" data-execution_count="37">
+<div id="d4bec156" class="cell" data-execution_count="37">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;relationship&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5259,7 +5259,7 @@ dtype: bool</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="4d43ebd5" class="cell" data-execution_count="38">
+<div id="b62f10fa" class="cell" data-execution_count="38">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;race&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5269,7 +5269,7 @@ dtype: bool</code></pre>
        &#39;other&#39;], dtype=object)</code></pre>
 </div>
 </div>
-<div id="597cc952" class="cell" data-execution_count="39">
+<div id="54cfa0ee" class="cell" data-execution_count="39">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;race&#39;</span>] <span class="op">=</span> adult_df[<span class="st">&#39;race&#39;</span>].replace({</span>
@@ -5281,7 +5281,7 @@ dtype: bool</code></pre>
 <span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="fe0acbae" class="cell" data-execution_count="40">
+<div id="4b57366e" class="cell" data-execution_count="40">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;race&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5475,7 +5475,7 @@ dtype: bool</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="5447b87f" class="cell" data-execution_count="41">
+<div id="9142f868" class="cell" data-execution_count="41">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;native_country&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5492,7 +5492,7 @@ dtype: bool</code></pre>
        &#39;holand-netherlands&#39;], dtype=object)</code></pre>
 </div>
 </div>
-<div id="95fb7c26" class="cell" data-execution_count="42">
+<div id="2cf1c2f4" class="cell" data-execution_count="42">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;native_region&#39;</span>] <span class="op">=</span> adult_df[<span class="st">&#39;native_country&#39;</span>].replace({</span>
@@ -5541,7 +5541,7 @@ dtype: bool</code></pre>
 <span id="cb46-44"><a href="#cb46-44" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="958c43b6" class="cell" data-execution_count="43">
+<div id="6b820bb0" class="cell" data-execution_count="43">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>adult_df[<span class="st">&#39;native_region&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5554,7 +5554,7 @@ dtype: bool</code></pre>
 </section>
 <section id="loading-our-csv-as-23.csv" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Loading our csv as 23.csv</h1>
-<div id="c567e957" class="cell" data-execution_count="44">
+<div id="784193bc" class="cell" data-execution_count="44">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
@@ -5566,19 +5566,19 @@ dtype: bool</code></pre>
 <span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>adult_df.to_csv(file_path, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="9ec4bbb0" class="cell" data-execution_count="45">
+<div id="25cfc9aa" class="cell" data-execution_count="45">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>pwd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="45">
-<pre><code>&#39;C:\\Users\\ADELINE PC\\Downloads\\Adult_Income\\docs&#39;</code></pre>
+<pre><code>&#39;C:\\Users\\ADELINE PC\\Downloads\\Adult_Income\\notebooks&#39;</code></pre>
 </div>
 </div>
 <section id="create-age-groups-based-on-the-age-column" class="level3" data-number="1.0.1">
 <h3 data-number="1.0.1" class="anchored" data-anchor-id="create-age-groups-based-on-the-age-column"><span class="header-section-number">1.0.1</span> 6. Create age groups based on the <code>age</code> column</h3>
 <p>Age is binned into groups such as <code>&lt;18</code>, <code>18-25</code>, <span class="math inline">\(\cdots\)</span>, <code>76+</code> to facilitate easier demographic analysis.</p>
-<div id="0f47ecb7" class="cell" data-execution_count="49">
+<div id="854d0bd0" class="cell" data-execution_count="49">
 <div class="cell-output cell-output-display" data-execution_count="49">
 <pre><code>[&#39;36-45&#39;, &#39;46-60&#39;, &#39;26-35&#39;, &#39;18-25&#39;, &#39;&lt;18&#39;, &#39;76+&#39;, &#39;61-75&#39;]
 Categories (7, object): [&#39;&lt;18&#39; &lt; &#39;18-25&#39; &lt; &#39;26-35&#39; &lt; &#39;36-45&#39; &lt; &#39;46-60&#39; &lt; &#39;61-75&#39; &lt; &#39;76+&#39;]</code></pre>
@@ -5588,13 +5588,13 @@ Categories (7, object): [&#39;&lt;18&#39; &lt; &#39;18-25&#39; &lt; &#39;26-35&#
 <section id="drop-unnecessary-columns" class="level3" data-number="1.0.2">
 <h3 data-number="1.0.2" class="anchored" data-anchor-id="drop-unnecessary-columns"><span class="header-section-number">1.0.2</span> 7. Drop unnecessary columns</h3>
 <p>After recoding, some columns such as <code>education</code>, <code>native_country</code> and <code>occupation</code> become redundant. We drop them to avoid multicollinearity and simplify our dataset. We notably retain the <code>age</code> column in case there is need to model it as a continuous variable.</p>
-<div id="f4b368e0" class="cell" data-execution_count="50">
+<div id="95fafa1c" class="cell" data-execution_count="50">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>adult_df <span class="op">=</span> adult_df.drop(columns<span class="op">=</span>[<span class="st">&#39;education&#39;</span>, <span class="st">&#39;native_country&#39;</span>, <span class="st">&#39;occupation&#39;</span>], errors<span class="op">=</span><span class="st">&#39;ignore&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="c6b79f50" class="cell" data-execution_count="51">
+<div id="d0e1d6c4" class="cell" data-execution_count="51">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>adult_df.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5734,12 +5734,12 @@ Categories (7, object): [&#39;&lt;18&#39; &lt; &#39;18-25&#39; &lt; &#39;26-35&#
 </div>
 </div>
 </div>
-<div id="ef26af2e" class="cell" data-execution_count="54">
+<div id="5e4c94fe" class="cell" data-execution_count="54">
 <div class="cell-output cell-output-display" data-execution_count="54">
 <pre><code>24</code></pre>
 </div>
 </div>
-<div id="4818f69f" class="cell" data-execution_count="55">
+<div id="1908eaf6" class="cell" data-execution_count="55">
 <div class="cell-output cell-output-display" data-execution_count="55">
 <div>
 
@@ -6689,7 +6689,7 @@ Categories (7, object): [&#39;&lt;18&#39; &lt; &#39;18-25&#39; &lt; &#39;26-35&#
 <section id="save-the-clean-dataset" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="save-the-clean-dataset"><span class="header-section-number">1.1</span> Save the Clean Dataset</h2>
 <p>Before saving the clean dataset, we re-inspect it to ensure no new issues have risen up due to re-encoding. We first of all inspect the shape of the dataset. We see that we have <em>32,537</em> rows and <em>16</em> columns. This means that there is a new column, <code>age_group</code>, added to the original dataset.</p>
-<div id="7cfef0cc" class="cell" data-execution_count="57">
+<div id="67e6b337" class="cell" data-execution_count="57">
 <div class="cell-output cell-output-display" data-execution_count="57">
 <pre><code>(32513, 16)</code></pre>
 </div>
