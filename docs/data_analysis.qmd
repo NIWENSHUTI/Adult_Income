@@ -5,13 +5,18 @@ author:
     affiliation: Junior Data Analyst
 date: '2025-06-25'
 format:
-  html:
+ html:
     page-layout: full
     self-contained: true
     code-fold: true
     code-tools: true
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
+    number-sections: true
+    number-tables: true
+    toc: true
     toc-location: left
-    toc-title: contents
+    toc-title: Contents
 jupyter:
   kernelspec:
     display_name: Python [python] *
@@ -460,8 +465,6 @@ fig.update_layout(
 )
 
 fig.show()
-
-fig.write_image(os.path.join(results_dir, 'income_distribution_by_race_bar_plot.png'))
 fig.write_html(os.path.join(results_dir, 'income_distribution_by_race_bar_plot.html'))
 ```
 
