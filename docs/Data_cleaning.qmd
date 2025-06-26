@@ -105,6 +105,8 @@ adult_df.shape
 In addition, we check the data types using `.info`.
 
 ```{python}
+#| echo: false
+#| output: false
 adult_df.info()
 ```
 
@@ -596,54 +598,52 @@ adult_df['race'].unique()
 We create a new colum `native_region` which maps `native_country` to geographical regions (e.g., `north america`, `asia`, etc.). The mapping is as follows:
 
 
-**Table 9: Mapping from `native_country` to `native_regi
-on
-| native_country      | native_country     |
-|:-----------------|:--------------------|
-|`united-states`| `north america`|
-|`canada`| `north america`|
-|`puerto-rico`| `north america`|
-|`outlying-us(guam-usvi-etc)`| `north america`|
-|`mexico`| `north america`|
-|`cuba`| `central america`|
-|`jamaica`| `central america`|
-|`honduras`| `central america`|
-|`dominican-republic`| `central america`|
-|`el-salvador`| `central america`|
-|`guatemala`| `central america`|
-|`nicaragua`| `central america`|
-|`trinadad&tobago`| `central america`|
-|`haiti`| `central america`|
-|`columbia`| `south america`|
-|`ecuador`| `south america`|
-|`peru`| `south america`|
-|`south`| `south america`|
-|`india`| `asia`|
-|`china`| `asia`|
-|`iran`| `asia`|
-|`japan`| `asia`|
-|`philippines`| `asia`|
-|`cambodia`| `asia`|
-|`thailand`| `asia`|
-|`laos`| `asia`|
-|`taiwan`| `asia`|
-|`vietnam`| `asia`|
-|`hong`| `asia`|
-|`england`| `europe`|
-|`germany`| `europe`|
-|`france`| `europe`|
-|`italy`| `europe`|
-|`poland`| `europe`|
-|`portugal`| `europe`|
-|`yugoslavia`| `europe`|
-|`scotland`| `europe`|
-|`greece`| `europe`|
-|`ireland`| `europe`|
-|`hungary`| `europe`|
-|`holand-netherlands`| `europe`|
-|`other`| `other`|
-aiwan`| `asia`|
-|`vietnam`| `asia`|
+## Table 9: Mapping from `native_country` to `native_region`
+
+| native_country               | native_region    |
+|:----------------------------|:-----------------|
+| united-states               | north america    |
+| canada                      | north america    |
+| puerto-rico                 | north america    |
+| outlying-us(guam-usvi-etc) | north america    |
+| mexico                      | north america    |
+| cuba                        | central america  |
+| jamaica                     | central america  |
+| honduras                    | central america  |
+| dominican-republic          | central america  |
+| el-salvador                 | central america  |
+| guatemala                   | central america  |
+| nicaragua                   | central america  |
+| trinadad&tobago             | central america  |
+| haiti                       | central america  |
+| columbia                    | south america    |
+| ecuador                     | south america    |
+| peru                        | south america    |
+| south                       | south america    |
+| india                       | asia             |
+| china                       | asia             |
+| iran                        | asia             |
+| japan                       | asia             |
+| philippines                 | asia             |
+| cambodia                    | asia             |
+| thailand                    | asia             |
+| laos                        | asia             |
+| taiwan                      | asia             |
+| vietnam                     | asia             |
+| hong                        | asia             |
+| england                     | europe           |
+| germany                     | europe           |
+| france                      | europe           |
+| italy                       | europe           |
+| poland                      | europe           |
+| portugal                    | europe           |
+| yugoslavia                  | europe           |
+| scotland                    | europe           |
+| greece                      | europe           |
+| ireland                     | europe           |
+| hungary                     | europe           |
+| holand-netherlands          | europe           |
+| other                       | other            |
 
 ```{python}
 adult_df['native_country'].unique()
@@ -721,20 +721,28 @@ pwd
 Age is binned into groups such as `<18`, `18-25`, $\cdots$, `76+` to facilitate easier demographic analysis.
 
 ```{python}
+#| echo: false
+#| output: false
 adult_df['age'].unique()
 ```
 
 ```{python}
+#| echo: false
+#| output: false
 bins = [0,18,25,35,45,60,75,100]
 labels = ['<18','18-25','26-35','36-45','46-60','61-75','76+']
 adult_df['age_group'] = pd.cut(adult_df['age'],bins= bins, labels = labels, right=True, include_lowest= True)
 ```
 
 ```{python}
+#| echo: false
+#| output: false
 pd.cut([1,2,3], bins=[0,2,4], right=True, include_lowest=False)
 ```
 
 ```{python}
+#| echo: false
+#| output: true
 adult_df['age_group'].unique()
 ```
 
@@ -757,8 +765,8 @@ adult_df.columns
 adult_df.isnull().sum()
 ```
 ```{python}
-#| label: tbl-dataset-overview
-#| tbl-cap: Overview of dataset columns, their data types, and the count of missing values in each column.
+#| label: tbl_3-dataset-overview
+#| tbl-cap: Overview 3 of dataset columns, their data types, and the count of missing values in each column.
 summary_df = pd.DataFrame({
     'Column': adult_df.columns,
     'Data Type': adult_df.dtypes.values,
@@ -797,6 +805,8 @@ adult_df.shape
 ```
 
 ```{python}
+#| echo: false
+#| output: false
 # Save the file in the processed data folder
 final_file = os.path.join(processed_dir,'adult_cleaned.csv')
 adult_df.to_csv(final_file, index=False)
